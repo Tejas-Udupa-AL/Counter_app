@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/service/quoteService.dart';
-import 'package:flutter_app/ui/homePage.dart';
+import 'package:flutter_app/service/quote_service.dart';
+import 'package:flutter_app/ui/home_page.dart';
 import 'package:rxdart/rxdart.dart';
 
 void main() {
