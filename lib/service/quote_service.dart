@@ -1,9 +1,10 @@
 import 'dart:convert';
 import 'dart:math';
 
+import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
-class QuotesService {
+class QuotesService extends ChangeNotifier {
   static const _url = 'https://type.fit/api/quotes';
 
   static Future<String> requestQuote() async {

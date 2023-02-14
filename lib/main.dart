@@ -2,12 +2,15 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/service/quote_service.dart';
 import 'package:flutter_app/ui/home_page.dart';
+import 'package:provider/provider.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 part 'main.freezed.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    MultiProvider(providers: [ChangeNotifierProvider(create: (_) => QuotesService())], child: const MyApp()),
+  );
 }
 
 class MyApp extends StatelessWidget {
